@@ -48,7 +48,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="jquery-3.1.1.min.js"></script>
     <style>
     #view-source {
       position: fixed;
@@ -64,62 +63,39 @@
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+          <h3>GitGoodDecisions</h3>
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
           <a href="#overview" class="mdl-layout__tab is-active">Feed</a>
           <a href="#features" class="mdl-layout__tab">Profile</a>
-          <!-- Search -->
-      <div class="mdh-expandable-search mdl-cell--hide-phone">
-        <i class="material-icons">chat</i>
-        <form action="#">
-          <input type="text" placeholder="Ask a question" size="1" id="searchbar">
-        </form>
-        <script src="fun.js"></script>
-      </div>
         </div>
       </header>
       <main class="mdl-layout__content">
+        <!-- dihsadhashdhshkjfjkhehkgdrhkgahdkg-->
         <div class="mdl-layout__tab-panel is-active" id="overview">
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card">
-             <div class="mdl-card mdl-cell mdl-cell--12-col">
-               <div class="mdl-card__supporting-text">
-                 <h4 id="cardname">A difficult decision</h4>
-                 A difficult choice.
-               </div>
-               <div class="mdl-card__actions">
-                 <a href="#" class="mdl-button" id="opt1">Option 1</a>
-                 <a href="#" class="mdl-button" id="opt2">Option 2</a>
-               </div>
-             </div>
-             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
-               <i class="material-icons">more_vert</i>
-             </button>
-             <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn3">
-               <li class="mdl-menu__item" disabled>Favourite</li>
-               <li class="mdl-menu__item" disabled>Save</li>
-               <li class="mdl-menu__item" disabled>Hide</li>
-             </ul>
-           </section>
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-             <div class="mdl-card mdl-cell mdl-cell--12-col">
-               <div class="mdl-card__supporting-text">
-                 <h4>A difficult decision</h4>
-                 The time has come. Who do I choose?
-               </div>
-               <div class="mdl-card__actions">
-                 <a href="#" class="mdl-button">Donald Trump</a>
-                 <a href="#" class="mdl-button">Hilary Clinton</a>
-               </div>
-             </div>
-             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn4">
-               <i class="material-icons">more_vert</i>
-             </button>
-             <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn4">
-               <li class="mdl-menu__item" disabled>Favourite</li>
-               <li class="mdl-menu__item" disabled>Save</li>
-               <li class="mdl-menu__item" disabled>Hide</li>
-             </ul>
-           </section>
-          <section class="section--footer mdl-color--white mdl-grid">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Technology</h4>
+                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.
+              </div>
+              <div class="mdl-card__actions">
+                <a href="#" class="mdl-button">Read our features</a>
+              </div>
+            </div>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
+              <i class="material-icons">more_vert</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn3">
+              <li class="mdl-menu__item">Lorem</li>
+              <li class="mdl-menu__item" disabled>Ipsum</li>
+              <li class="mdl-menu__item">Dolor</li>
+            </ul>
           </section>
         </div>
         <div class="mdl-layout__tab-panel" id="features">
@@ -232,6 +208,7 @@
         </footer>
       </main>
     </div>
+    <a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/text-only/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Ask a Question</a>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </body>
 </html>
