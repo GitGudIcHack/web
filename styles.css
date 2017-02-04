@@ -55,6 +55,7 @@ html, body {
 }
 .mdl-demo main > .mdl-layout__tab-panel {
   padding: 8px;
+  padding-bottom: 48px;
   padding-top: 48px;
 }
 .mdl-demo .mdl-card {
@@ -184,6 +185,9 @@ html, body {
   height: 100px;
   border-radius: 50px;
   margin: 8px 32px;
+}
+.mdl-mega-footer {
+  padding: 50px !important;
 }
 .mdl-demo .is-small-screen section.section--footer .section__circle--big {
   width: 50px;
