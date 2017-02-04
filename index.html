@@ -79,15 +79,22 @@
       </header>
       <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="overview">
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp " id="card">
              <div class="mdl-card mdl-cell mdl-cell--12-col">
                <div class="mdl-card__supporting-text">
                  <h4 id="cardname">A difficult decision</h4>
                  A difficult choice.
                </div>
                <div class="mdl-card__actions">
-                 <a href="#" class="mdl-button" id="opt1">Option 1</a>
-                 <a href="#" class="mdl-button" id="opt2">Option 2</a>
+                 <form action="action.php" method="post">
+                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--short">
+                     <input type="text" class="mdl-textfield__input" id="input_text" name="option1" placeholder="Option 1" />
+                   </div>
+                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--short ">
+                     <input type="text" class="mdl-textfield__input" id="input_text" name="option2" placeholder="Option 2" />
+                   </div>
+                   <button type="submit" class="mdl-button">Submit</button>
+                   </form>
                </div>
              </div>
              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
@@ -99,7 +106,7 @@
                <li class="mdl-menu__item" disabled>Hide</li>
              </ul>
            </section>
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp hi">
              <div class="mdl-card mdl-cell mdl-cell--12-col">
                <div class="mdl-card__supporting-text">
                  <h4>A difficult decision</h4>
