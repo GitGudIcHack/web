@@ -82,17 +82,16 @@ function loadXMLDoc() {
       }
     }
   };
-  xmlhttp.open("GET", "../get.php", true);
+  xmlhttp.open("GET", 'http://mhutti1.eu/makeQ?user1?' + document.getElementsByTagName("h4")[0] + '?' + document.getElementById("#option1") + '?' + document.getElementById("#option2"), true);
   xmlhttp.send();
 }
 </script>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <script>
-    function send() {
-      $.getJSON("/", function(data) {
-        console.log(data)
-      })
-    }
+    $("button").click(function(){
+        $.get("http://mhutti1.eu/?" + getElementById("h4") + '?' + getElementsByTagName("#option1") + '?' + getElementsByTagName("#option2")
+        });
+    });
     </script>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
@@ -126,7 +125,7 @@ function loadXMLDoc() {
                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--short">
                      <input type="text" class="mdl-textfield__input" id="input_text" name="option2" placeholder="Option 2" />
                    </div>
-                   <button type="submit" class="mdl-button" onclick="send">Submit</button>
+                   <button type="submit" class="mdl-button" id="subutton">Submit</button>
                </div>
                </form>
              </div>
