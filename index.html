@@ -61,10 +61,7 @@
     }
     </style>
   </head>
-  <h2>Using the XMLHttpRequest object</h2>
 
-<button type="button" onclick="loadXMLDoc()">Change Content</button>
-<p id="demo"></p>
 <script>
 function loadXMLDoc() {
   var xmlhttp;
@@ -77,22 +74,17 @@ function loadXMLDoc() {
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var stuff = JSON.parse(this.responseText);
-      for(i =0; i < 4; i++){
+      for(i =0; i < stuff.length; i++){
         cloneThing(stuff[i]);
       }
     }
   };
-  xmlhttp.open("GET", 'http://mhutti1.eu/makeQ?user1?' + document.getElementsByTagName("h4")[0] + '?' + document.getElementById("#option1") + '?' + document.getElementById("#option2"), true);
+  xmlhttp.open("GET", "http://mhutti1.eu/test/get.php", true);
   xmlhttp.send();
 }
+loadXMLDoc();
 </script>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-    <script>
-    $("button").click(function(){
-        $.get("http://mhutti1.eu/?" + getElementById("h4") + '?' + getElementsByTagName("#option1") + '?' + getElementsByTagName("#option2")
-        });
-    });
-    </script>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
@@ -115,7 +107,6 @@ function loadXMLDoc() {
                <div class="mdl-card__supporting-text">
                  <h1 id="test"></h>
                  <h4 id="cardname">A difficult decision</h4>
-                 A difficult choice.
                </div>
                <form>
                <div class="mdl-card__actions">
@@ -134,11 +125,10 @@ function loadXMLDoc() {
              <div class="mdl-card mdl-cell mdl-cell--12-col">
                <div class="mdl-card__supporting-text">
                  <h4>A difficult decision</h4>
-                 The time has come. Who do I choose?
                </div>
                <div class="mdl-card__actions">
-                 <a href="#" class="mdl-button" id="button1">Donald Trump</a>
-                 <a href="#" class="mdl-button" id="button2">Hilary Clinton</a>
+                 <a href="#" class="mdl-button button1" id="button1">Donald Trump</a>
+                 <a href="#" class="mdl-button button2" id="button2">Hilary Clinton</a>
                </div>
              </div>
            </section>
@@ -150,11 +140,10 @@ function loadXMLDoc() {
              <div class="mdl-card mdl-cell mdl-cell--12-col">
                <div class="mdl-card__supporting-text">
                  <h4>ICL vs UCL</h4>
-                 Pretty obvious: Memeperial or UCL memes for Light-guided Teens
                </div>
                <div class="mdl-card__actions">
-                 <a href="#" class="mdl-button" id="button1">Memeperial (10)</a>
-                 <a href="#" class="mdl-button" id="button2">UCL Memes (-17)</a>
+                 <a href="#" class="mdl-button button1" id="button1">Memeperial (10)</a>
+                 <a href="#" class="mdl-button button2" id="button2">UCL Memes (-17)</a>
                </div>
              </div>
            </section>
@@ -162,11 +151,10 @@ function loadXMLDoc() {
              <div class="mdl-card mdl-cell mdl-cell--12-col">
                <div class="mdl-card__supporting-text">
                  <h4>A difficult decision</h4>
-                 The time has come. Who do I choose?
                </div>
                <div class="mdl-card__actions">
-                 <a href="#" class="mdl-button" id="button1">Donald Trump (3)</a>
-                 <a href="#" class="mdl-button" id="button2">Hilary Clinton (1)</a>
+                 <a href="#" class="mdl-button button1" id="button1">Donald Trump (3)</a>
+                 <a href="#" class="mdl-button button2" id="button2">Hilary Clinton (1)</a>
                </div>
              </div>
            </section>

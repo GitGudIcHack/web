@@ -11,7 +11,7 @@ document.querySelector('#searchbar').addEventListener('keypress', function (e) {
     clone.getElementsByTagName("h4").cardname.textContent = searchstring.val();
     $('#overview').prepend(cloneObj);
     document.getElementById('searchbar').value = "";
-    }
+    
     var button = clone.getElementsByTagName("button")[0];
     var input1 = clone.getElementsByTagName("input")[0];
     var input2 = clone.getElementsByTagName("input")[1];
@@ -26,8 +26,16 @@ document.querySelector('#searchbar').addEventListener('keypress', function (e) {
         cloneText2.get(0).text = input2.value;
         $(input1).parent().replaceWith(cloneText1);
         $(input2).parent().replaceWith(cloneText2);
+  	var xmlhttpa;
+  	if (window.XMLHttpRequest) {
+    		xmlhttpa = new XMLHttpRequest();
+ 	} else {
+    		xmlhttpa = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	  xmlhttpa.open("GET", 'http://mhutti1.eu/test/insert.php?question_val=' + clone.getElementsByTagName("h4").cardname.textContent + '&op1=' + input1.value + '&op2=' + input2.value, true);
+	xmlhttpa.send();
     });
-});
+}});
 $("mdl-button").on("click", function(event){
     $(this).attr("disabled", true);
 });
@@ -39,5 +47,7 @@ function cloneThing(elem) {
   clone.id = 'newid' + clone.id
   clone.classList.remove("hidden");
   clone.getElementsByTagName("h4")[0].textContent = elem.question_val;
+  clone.getElementsByClassName("button1")[0].textContent = elem.option1;
+  clone.getElementsByClassName("button2")[0].textContent = elem.option2;
   $('#overview').prepend(cloneObj);
 }
