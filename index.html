@@ -78,7 +78,7 @@ function loadXMLDoc() {
   }
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      var stuff = JSON.parse(responseText);
+      var stuff = JSON.parse(this.responseText);
       for(i =0; i < 4; i++){
         cloneThing(stuff[i]);
       }
