@@ -38,7 +38,6 @@ function cloneThing(elem) {
   var clone = cloneObj.get(0)
   clone.id = 'newid' + clone.id
   clone.classList.remove("hidden");
-  searchstring.focus();
-  clone.getElementsByTagName("h4").cardname.textContent = elem.question_val;
+  clone.getElementsByTagName("h4")[0].textContent = elem.question_val;
   $('#overview').prepend(cloneObj);
 }
