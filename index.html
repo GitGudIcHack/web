@@ -64,9 +64,7 @@
   <h2>Using the XMLHttpRequest object</h2>
 
 <button type="button" onclick="loadXMLDoc()">Change Content</button>
-
 <p id="demo"></p>
-
 <script>
 function loadXMLDoc() {
   var xmlhttp;
@@ -82,15 +80,20 @@ function loadXMLDoc() {
       for(i =0; i < 4; i++){
         cloneThing(stuff[i]);
       }
-
     }
   };
   xmlhttp.open("GET", "../get.php", true);
   xmlhttp.send();
 }
 </script>
-
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <script>
+    function send() {
+      $.getJSON("/", function(data) {
+        console.log(data)
+      })
+    }
+    </script>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
@@ -115,6 +118,7 @@ function loadXMLDoc() {
                  <h4 id="cardname">A difficult decision</h4>
                  A difficult choice.
                </div>
+               <form>
                <div class="mdl-card__actions">
                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--short">
                      <input type="text" class="mdl-textfield__input" id="input_text" name="option1" placeholder="Option 1" />
@@ -122,12 +126,12 @@ function loadXMLDoc() {
                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--short">
                      <input type="text" class="mdl-textfield__input" id="input_text" name="option2" placeholder="Option 2" />
                    </div>
-                   <button type="submit" class="mdl-button">Submit</button>
-
+                   <button type="submit" class="mdl-button" onclick="send">Submit</button>
                </div>
+               </form>
              </div>
            </section>
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp " id="finalcard">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp hidden" id="finalcard">
              <div class="mdl-card mdl-cell mdl-cell--12-col">
                <div class="mdl-card__supporting-text">
                  <h4>A difficult decision</h4>
