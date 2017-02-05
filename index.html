@@ -80,7 +80,7 @@ function loadXMLDoc() {
     if (this.readyState == 4 && this.status == 200) {
       var stuff = JSON.parse(responseText);
       for(i =0; i < 4; i++){
-        clonething(stuff[i]);
+        cloneThing(stuff[i]);
       }
 
     }
