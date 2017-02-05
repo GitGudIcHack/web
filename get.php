@@ -1,0 +1,3 @@
+
+<!-- saved from url=(0030)http://mhutti1.eu/test/get.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>{"test":[{"user_id":"1","question_id":"1","question_val":"q","option1":"a1","count1":"1","option2":"a2","count2":"2"},{"user_id":"1","question_id":"2","question_val":"q1","option1":"a1","count1":"1","option2":"a2","count2":"2"},{"user_id":"0","question_id":"3","question_val":"test","option1":"1","count1":"0","option2":"2","count2":"0"}]}</body></html>

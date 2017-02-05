@@ -61,6 +61,31 @@
     }
     </style>
   </head>
+  <h2>Using the XMLHttpRequest object</h2>
+
+<button type="button" onclick="loadXMLDoc()">Change Content</button>
+
+<p id="demo"></p>
+
+<script>
+function loadXMLDoc() {
+  var xmlhttp;
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    // code for older browsers
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(this.responseText);
+    }
+  };
+  xmlhttp.open("GET", "get.php", true);
+  xmlhttp.send();
+}
+</script>
+
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
@@ -82,6 +107,7 @@
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp hidden" id="card">
              <div class="mdl-card mdl-cell mdl-cell--12-col">
                <div class="mdl-card__supporting-text">
+                 <h1 id="test"></h>
                  <h4 id="cardname">A difficult decision</h4>
                  A difficult choice.
                </div>
