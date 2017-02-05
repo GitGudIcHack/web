@@ -161,7 +161,7 @@ function loadXMLDoc() {
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="finalcard">
              <div class="mdl-card mdl-cell mdl-cell--12-col">
                <div class="mdl-card__supporting-text">
-                 <h4>A difficult decision</h4>
+                 <h4 id="question-text">A difficult decision</h4>
                  The time has come. Who do I choose?
                </div>
                <div class="mdl-card__actions">
@@ -172,7 +172,13 @@ function loadXMLDoc() {
            </section>
         </div>
         <div class="mdl-layout-spacer"></div>
-
+        <script type="text/javascript">
+          $(document).ready(function() {
+            $('.mdl-button').click(function() {
+              alert('soisgdi');
+            })
+          });
+        </script>
 <footer class="mdl-mini-footer">
 <div class="mdl-mini-footer--middle-section">
 <ul class="mdl-mini-footer--link-list">
